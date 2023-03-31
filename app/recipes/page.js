@@ -1,7 +1,12 @@
 const Recipe = () => {
-    return ( <div>
+    
+   
+    
+    return ( 
+    <div>
         Recipe
+
+
     </div> );
 }
- 
 export default Recipe;
