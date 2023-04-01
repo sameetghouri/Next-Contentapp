@@ -1,3 +1,4 @@
+import Nav from '@/components/Nav'
 import './globals.css'
 
 export const metadata = {
@@ -8,7 +9,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className='bg-yellow-400 flex flex-col items-center'>
+        <main className='min-h-screen w-full max-w-5xl'>
+        <Nav/>
+        {children}
+        </main>
+        <footer className='w-full bg-black text-center py-8 text-xl text-white'>
+          <p>Copyright 2023 Just Add Marmite :) </p>
+        </footer>
+        </body>
+
     </html>
   )
 }
