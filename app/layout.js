@@ -9,9 +9,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className='bg-yellow-400 flex flex-col items-center'>
+      <body className='flex flex-col items-center bg-no-repeat bg-center bg-cover bg-fixed'
+      style={{"background-image": "url(/back.svg)"}}>
+      <Nav/>
         <main className='min-h-screen w-full max-w-5xl'>
-        <Nav/>
+        
         {children}
         </main>
         <footer className='w-full bg-black text-center py-8 text-xl text-white'>
