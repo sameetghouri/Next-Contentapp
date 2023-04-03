@@ -7,10 +7,11 @@ const RecipeCard = ({ recipe }) => {
             <div>
                 <Image src={'https:'+thumbnail.fields.file.url} 
                 width={thumbnail.fields.file.details.image.width}
-                 height={thumbnail.fields.file.details.image.height}/>
+                 height={thumbnail.fields.file.details.image.height}
+                 alt='title'/>
                
             </div>
-            <div className='bg-white shadow relative -top-5 -left-2 p-4'>
+            <div className='bg-white shadow-lg relative -top-5 -left-2 p-4'>
                 <div className=''>
                     <h4 className='uppercase'>{title}</h4>
                     <p className='text-gray-700'>Takes approx {cookingTime} mins to make</p>
