@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
       <body className='flex flex-col items-center bg-no-repeat bg-center bg-cover bg-fixed'
       style={{"background-image": "url(/back.svg)"}}>
       <Nav/>
-        <main className='min-h-screen w-full max-w-5xl'>
+        <main className='min-h-screen w-full max-w-5xl p-5'>
         
         {children}
         </main>

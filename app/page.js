@@ -11,7 +11,7 @@ export default async function Home() {
   const recipes = res.items;
   
   return (
-    <div className="">
+    <div className="grid grid-cols-2 gap-x-14 gap-y-6">
       {recipes.map((recipe) => (
         <RecipeCard key={recipe.sys.id} recipe={recipe} />
       ))}
