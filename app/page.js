@@ -1,6 +1,6 @@
 import RecipeCard from "@/components/RecipeCard";
 import { createClient } from "contentful"
-export default async function Home() {
+const Home = async()=> {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken:process.env.CONTENTFUL_ACCESS_TOKEN,
@@ -18,3 +18,4 @@ export default async function Home() {
     </div>
   )
 }
+export default Home;
