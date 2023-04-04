@@ -12,7 +12,6 @@ const Nav = () => {
         </Link>
         <ul className='flex gap-5 mt-3 '>
             <li><Link href='/' className='hover:text-white font-bold'>Home</Link></li>
-            <li><Link href='/recipes/details' className='hover:text-white font-bold'>Recipes</Link></li>
         </ul>
 
     </nav>);

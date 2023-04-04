@@ -32,7 +32,7 @@ const RecipeDetails = async ({ params }) => {
     })
     const recipe = res.items[0]
     const {featuredImage, title, cookingTime, ingredients,method} = recipe.fields
-    console.log(method)
+    
     return (
         <div className="text-lg">
             <div className="">
@@ -40,16 +40,16 @@ const RecipeDetails = async ({ params }) => {
                 width={ featuredImage.fields.file.details.image.width }
                 height={ featuredImage.fields.file.details.image.height}
                 />  
-                <h2 className="uppercase bg-white p-2 relative -top-2   font-bold">{title}</h2>
+                <h2 className="uppercase w-1/3 bg-white p-2 relative -top-2 -left-1 -rotate-1 font-bold">{title}</h2>
             </div>
-            <div className="bg-white bg-opacity-40 rounded p-2">
+            <div className="bg-white mt-1 bg-opacity-40 rounded p-4">
                 <p>Takes approx {cookingTime} mins to make</p>
-                <h3 className="uppercase font-bold">Ingredients</h3>
+                <h3 className="uppercase font-bold pt-4">Ingredients</h3>
                 {ingredients.map((item,id) => (
                     <span key={id}>{id+1}:{item} </span>
                 ))}
             </div>
-            <div className="bg-white bg-opacity-40 rounded p-2">
+            <div className="bg-white bg-opacity-40 rounded px-4 pb-4">
                 <h3 className="uppercase font-bold">Method</h3>
                 <p>{documentToReactComponents(method)}</p>
             </div>
