@@ -7,6 +7,7 @@ const Home = async()=> {
   })
   const res = await client.getEntries({
     content_type: "recipe",
+    'fields.featured': true
   })
   const recipes = res.items;
   
@@ -18,4 +19,5 @@ const Home = async()=> {
     </div>
   )
 }
+export const revalidate = 1; 
 export default Home;
