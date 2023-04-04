@@ -17,7 +17,7 @@ const RecipeCard = ({ recipe }) => {
                     <p className='text-gray-700'>Takes approx {cookingTime} mins to make</p>
                 </div>
                 <div className='mt-4 flex justify-end'>
-                    <Link className='bg-red-500 px-2 py-1 text-white rounded' href={`/recipes/${slug}`}>
+                    <Link className='bg-red-500 px-2 py-1 text-white rounded hover:scale-105 transition duration-150' href={`/recipes/${slug}`}>
                        Cook This
                     </Link>
                 </div>
