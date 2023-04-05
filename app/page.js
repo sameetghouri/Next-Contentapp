@@ -11,12 +11,12 @@ const Home = async()=> {
   const recipes = res.items;
   
   return (
-    <div className="grid grid-cols-2 gap-x-14 gap-y-6">
+    <div className="grid grid-cols-3 gap-x-12 gap-y-6">
       {recipes.map((recipe) => (
         <RecipeCard key={recipe.sys.id} recipe={recipe} />
       ))}
     </div>
   )
 }
-export const revalidate = 1; 
+export const revalidate = 10; 
 export default Home;
