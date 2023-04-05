@@ -3,7 +3,7 @@ import Image from 'next/image'
 const RecipeCard = ({ recipe }) => {
     const { title, slug, cookingTime, thumbnail } = recipe.fields
     return (
-        <div className='-rotate-1  transition duration-200'>
+        <div className='-rotate-1'>
             <div>
                 <Image src={'https:'+thumbnail.fields.file.url} 
                 width={thumbnail.fields.file.details.image.width}
@@ -11,7 +11,7 @@ const RecipeCard = ({ recipe }) => {
                  alt='title'/>
                
             </div>
-            <div className='bg-white shadow-lg hover:shadow-xl relative -top-5 -left-2 p-4'>
+            <div className='bg-white shadow-lg hover:shadow hover:shadow-gray-300 relative -top-5 -left-2 p-4'>
                 <div className=''>
                     <h4 className='uppercase'>{title}</h4>
                     <p className='text-gray-700'>Takes approx {cookingTime} mins to make</p>

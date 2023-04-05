@@ -10,11 +10,11 @@ const notFound = () => {
         //     router.push("/");
         // }, 3000);
     }, []);
-    return ( <div className="h-screen w-full flex flex-col items-center justify-center">
+    return ( <div className="py-4 bg-white -rotate-1 w-full flex flex-col items-center ">
         <h1 className="text-3xl">404</h1>
         <p className="text-2xl">Page not found</p>
         
-        <Link className="hover:text-sky-600" href='/'>Go Back To Home</Link>
+        <Link className="hover:scale-105 transition duration-150" href='/'>Go Back To Home</Link>
     </div> );
 }
  
