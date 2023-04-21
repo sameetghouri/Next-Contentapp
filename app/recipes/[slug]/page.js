@@ -40,7 +40,24 @@ const RecipeDetails = async ({ params }) => {
 
     return (
         <div className="text-lg flex flex-col items-center">
-           
+            <div className="w-2/3">
+                <Image src={'https:' + featuredImage.fields.file.url}
+                    width={featuredImage.fields.file.details.image.width}
+                    height={featuredImage.fields.file.details.image.height}
+                />
+                <h2 className="uppercase w-60 bg-white p-2 relative -top-2 -left-1 -rotate-1 font-bold">{title}</h2>
+            </div>
+            <div className="bg-white w-10/12 mt-1 bg-opacity-40 rounded p-4">
+                <p>Takes approx {cookingTime} mins to make</p>
+                <h3 className="uppercase font-bold pt-4">Ingredients</h3>
+                {ingredients.map((item, id) => (
+                    <span key={id}>{id + 1}:{item} </span>
+                ))}
+            </div>
+            <div className="bg-white w-10/12 bg-opacity-40 rounded px-4 pb-4">
+                <h3 className="uppercase font-bold">Method</h3>
+                <p>{documentToReactComponents(method)}</p>
+            </div>
         </div>
     );
 }
