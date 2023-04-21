@@ -9,8 +9,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className='flex flex-col items-center bg-no-repeat bg-center bg-cover bg-fixed'
-      style={{"background-image": "url(/back.svg)"}}>
+      <body className='flex flex-col items-center bg-[url(/back.svg)] bg-no-repeat bg-center bg-cover bg-fixed'>
+      {/* style={{"background-image": "url(/back.svg)"}} */}
       <Nav/>
         <main className='min-h-screen w-full max-w-6xl p-5'>
         
